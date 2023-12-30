@@ -5,5 +5,5 @@ then
     echo "you are not root user"
 else
     echo "you are root user"
-    yum install nginx -y
+    yum install mysql -y
 fi

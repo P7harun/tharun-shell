@@ -4,14 +4,8 @@ echo "this script is running at a time of: $DATE"
 echo "hi, my name is tharun"
 echo "im going to be master in devops"
 echo "enter your numbers"
-read p1
-read p2
-SUM=$((p1+p2))
-echo "entered nums $p1 ,$p2 and sum is :$SUM"
-
 PERSONS=("THARUN" "UDAY" "RITHWIN")
-
-for (( i=3; i>=1, i--))
+for (( i=0; i<=2; i++))
 do 
-    echo "$i"
+    echo "${PERSONS[i]}"
 done

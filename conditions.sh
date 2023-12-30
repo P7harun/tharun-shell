@@ -1,7 +1,7 @@
 #!/bin/bash
 DATE=$(date +%F)
 SCRIPT_NAME=$0
-LOGFILE=?tmp/$SCRIPT_NAME-$DATE.log
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 VALIDATE(){
     #$1 is argument you give
     if [ $1 -ne 0 ]
@@ -19,7 +19,7 @@ NUM=$(id -u)
 if [ $NUM -ne 0 ]
 then
     echo "Error: you are not root user."
-    exit 1
+    #exit 1
 fi
 
 yum install mysql -y &>>$LOGFILE

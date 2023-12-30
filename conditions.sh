@@ -1,7 +1,7 @@
 #!/bin/bash
 VALIDATE(){
     #$1 is argument you give
-    if [ $1 -name 0 ]
+    if [ $1 -ne 0 ]
     then
         echo "Installion $2 Failure"
         exit 1

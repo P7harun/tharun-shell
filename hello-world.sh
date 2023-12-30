@@ -8,3 +8,10 @@ read p1
 read p2
 SUM=$((p1+p2))
 echo "entered nums $p1 ,$p2 and sum is :$SUM"
+
+PERSONS=("THARUN" "UDAY" "RITHWIN")
+
+for (( i=3; i>=1, i--))
+do 
+    echo "$i"
+done

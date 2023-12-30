@@ -1,4 +1,6 @@
 #!/bin/bash
 echo "hi, my name is tharun"
 echo "im going to be master in devops"
-yum install nginx -y
+p1=$1
+p2=$2
+echo "$p1 and $p2 are useless"

@@ -5,5 +5,5 @@ then
     echo "you are not root user"
 else
     echo "you are root user"
-    yum install mysql -y
+    yum install Mysql -y
 fi

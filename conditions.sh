@@ -1,4 +1,7 @@
 #!/bin/bash
+DATE=$(date +%F)
+SCRIPT_NAME=$0
+LOGFILE=?tmp/$SCRIPT_NAME-$DATE.log
 VALIDATE(){
     #$1 is argument you give
     if [ $1 -ne 0 ]
@@ -19,7 +22,7 @@ then
     exit 1
 fi
 
-yum install mysql -y
+yum install mysql -y &>>$LOGFILE
 VALIDATE $? mysql
-yum install postfix -y
+yum install postfix -y &>>$LOGFILE
 VALIDATE $? postfix

@@ -6,5 +6,5 @@ echo "im going to be master in devops"
 echo "enter your numbers"
 read p1
 read p2
-SUM = $((p1+p2))
+SUM=$((p1+p2))
 echo "entered nums $p1 ,$p2 and sum is :$SUM"

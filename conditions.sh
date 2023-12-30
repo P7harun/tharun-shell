@@ -1,6 +1,6 @@
 #!/bin/bash
 NUM=$(id -u)
-if ($NUM -gt 0)
+if [$NUM -gt 0]
 then
     echo "you are not root user"
 else

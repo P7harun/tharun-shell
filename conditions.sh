@@ -28,6 +28,7 @@ for i in "${PACKAGES[@]}"
 do
     rpm -q $i
     if [ $? -e 0 ]
+    then
         echo "$i is already installed"
     else
         echo "$i is not installed"

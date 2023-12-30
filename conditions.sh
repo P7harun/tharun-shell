@@ -22,7 +22,17 @@ then
     #exit 1
 fi
 
-yum install mysql -y &>>$LOGFILE
-VALIDATE $? mysql
-yum install postfix -y &>>$LOGFILE
-VALIDATE $? postfix
+PACKAGES=("nginx" "postfix" "nosql")
+
+for i in "${PACKAGES[@]}"
+do
+    rpm -q $i
+    if [ $? -e 0 ]
+        echo "$i is already installed"
+    else
+        echo "$i is not installed"
+        echo "procceding to installing"
+        yum install $i -y &>>LOGFILE
+        VALIDATE $? $i
+    fi
+done

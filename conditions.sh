@@ -27,13 +27,13 @@ PACKAGES=("nginx" "postfix" "nosql")
 for i in "${PACKAGES[@]}"
 do
     rpm -q $i
-    if [ $? -e 0 ]
+    if [ $? -ne 0 ]
     then
-        echo "$i is already installed"
-    else
-        echo "$i is not installed"
-        echo "procceding to installing"
+        #echo "$i is not installed"
+        #echo "procceding to installing"
         yum install $i -y &>>LOGFILE
-        VALIDATE $? $i
+        VALIDATE $? $i   
+    else
+        echo "$i is already installed"
     fi
 done

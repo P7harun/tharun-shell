@@ -17,7 +17,7 @@ echo "enter username"
 read USERNAME
 echo "enter apppassword"
 read APASWORD
-sed -e '$ a [smtp.gmail.com]:587 $USERNAME:APASWORD' /etc/postfix/sasl_passwd
+sed -e '$ a [smtp.gmail.com]:587 $USERNAME:$APASWORD' /etc/postfix/sasl_passwd
 postmap /etc/postfix/sasl_passwd
 
 echo "This is a test mail & Date $(date)" | mail -s "gmail shell script is done" tharun186189@gmail.com
